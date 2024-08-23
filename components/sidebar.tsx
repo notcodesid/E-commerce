@@ -1,16 +1,16 @@
-import { Button } from "@/components/ui/button"
-import { Progressbar } from "@/components/progressbar"
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Progress } from "@/components/ui/progress";
 
-const Sidebar = () => (
-  <div className="w-full h-full flex flex-col space-y-4 p-4 bg-background">
-    <h2 className="text-lg font-semibold">Sidebar</h2>
-    <Button variant="outline" className="w-full justify-start">Option 1</Button>
-    <Button variant="outline" className="w-full justify-start">Option 2</Button>
-    <Button variant="outline" className="w-full justify-start">Option 3</Button>
-    <Button variant="outline" className="w-full justify-start">Option 4</Button>
-
-    <Progressbar />
-  </div>
-)
-
-export default Sidebar
+export function Sidebar() {
+  return (
+    <div className="w-1/4 p-4 bg-muted">
+      <h2 className="font-bold mb-4">My Projects</h2>
+      {['Coding', 'Reading', 'Basic todos', 'Projects pending'].map((option, index) => (
+        <Button key={index} variant="outline" className="w-full mb-2">{option}</Button>
+      ))}
+      <h3 className="font-bold mt-4 mb-2">Progress bar</h3>
+      <Progress value={33} className="w-full" />
+    </div>
+  );
+}
