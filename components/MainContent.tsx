@@ -6,8 +6,10 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Tag, Trash2 } from "lucide-react";
 import { AddTodo } from "./AddTodo";
-import { Sidebar } from "./Sidebar"; // Import Sidebar
+import { Sidebar } from "./Sidebar"; 
 import { CalendarSection } from "./CalendarSection";
+import { SheetSide } from "./sheetLabe";
+import { SheetDemo } from "./sheetCalender";
 
 interface Todo {
   id: number;
@@ -51,6 +53,14 @@ export function MainContent() {
       />
 
       <div className="w-full p-4">
+        <div className="flex justify-between mb-10 md:hidden">
+        <SheetSide onLabelClick={function (label: string): void {
+            throw new Error("Function not implemented.");
+          } } />
+        <SheetDemo />
+
+        </div>
+
         {/* Search Input */}
         <Input 
           type="search" 
