@@ -1,17 +1,20 @@
  "use client"
-import React, { useState } from 'react';
-import { Navbar } from "@/components/navbar"
-import { Sidebar } from '@/components/sidebar';
+import { Navbar } from "@/components/Navbar"
+import { Sidebar } from '@/components/Sidebar';
 import { CalendarSection } from '@/components/CalendarSection';
 import  {MainContent} from '@/components/MainContent';
 
 export default function App() {
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen w-full text-foreground">
       <Navbar />
       <div className="flex">
-        <Sidebar />
+        <Sidebar isOpen={false} onClose={function (): void {
+          throw new Error('Function not implemented.');
+        } } onLabelClick={function (label: string): void {
+          throw new Error("Function not implemented.");
+        } } />
         <MainContent/>
         <CalendarSection />
       </div>

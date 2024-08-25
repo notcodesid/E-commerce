@@ -1,16 +1,34 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { Progress } from "@/components/ui/progress";
+import { X } from "lucide-react";
 
-export function Sidebar() {
+interface SidebarProps {
+  isOpen: boolean;
+  onClose: () => void;
+  onLabelClick: (label: string) => void; 
+}
+
+export function Sidebar({ isOpen, onClose, onLabelClick }: SidebarProps) {
+  const labels = ['Coding', 'Reading', 'Basic todos', 'Projects pending'];
+
   return (
-    <div className="w-1/4 p-4 bg-muted">
-      <h2 className="font-bold mb-4">My Projects</h2>
-      {['Coding', 'Reading', 'Basic todos', 'Projects pending'].map((option, index) => (
-        <Button key={index} variant="outline" className="w-full mb-2">{option}</Button>
+    <div className={`${isOpen ? 'block' : 'hidden'} md:block w-full md:w-1/4 p-4 bg-muted fixed md:static top-0 left-0 h-screen z-50 overflow-y-auto`}>
+      <div className="flex justify-between items-center mb-4 md:hidden">
+        <h2 className="font-bold">Labels</h2>
+        <Button variant="ghost" size="icon" onClick={onClose}>
+          <X className="h-5 w-5" />
+        </Button>
+      </div>
+      {labels.map((label, index) => (
+        <Button 
+          key={index} 
+          variant="outline" 
+          className="w-full mb-2" 
+          onClick={() => onLabelClick(label)} 
+        >
+          {label}
+        </Button>
       ))}
-      <h3 className="font-bold mt-4 mb-2">Progress bar</h3>
-      <Progress value={33} className="w-full" />
     </div>
   );
 }
