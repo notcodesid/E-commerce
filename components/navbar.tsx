@@ -1,7 +1,7 @@
 import React from "react";
 import { User } from "lucide-react";
 
-export function Navbar() {
+export default function Navbar() {
   return (
     <nav className="flex justify-between items-center p-4 bg-primary text-primary-foreground">
       <div className="flex items-center">

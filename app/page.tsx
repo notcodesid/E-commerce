@@ -1,5 +1,4 @@
-import { Navbar } from "@/components/Navbar"
-import { CalendarSection } from '@/components/CalendarSection';
+import  Navbar from "@/components/Navbar"
 import { MainContent } from '@/components/MainContent';
 
 export default function App() {

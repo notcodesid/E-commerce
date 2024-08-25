@@ -6,9 +6,9 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Tag, Trash2 } from "lucide-react";
 import { AddTodo } from "./AddTodo";
-import { Sidebar } from "./Sidebar"; 
+import { Sidebar } from "./Sidebar" 
 import { CalendarSection } from "./CalendarSection";
-import { SheetSide } from "./sheetLabe";
+import  SheetSide from "./sheetLabe";
 import { SheetDemo } from "./sheetCalender";
 
 interface Todo {

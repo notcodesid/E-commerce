@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Sidebar } from "./Sidebar"
-import { useState } from "react";
+
 
 const SHEET_SIDES = ["left"] as const;
 
@@ -13,7 +13,7 @@ interface SheetSideProps {
   onLabelClick: (label: string) => void;
 }
 
-export function SheetSide({ onLabelClick }: SheetSideProps) {
+export default function SheetSide({ onLabelClick }: SheetSideProps) {
 
  
   return (
