@@ -6,7 +6,7 @@ import {
 } from "@/components/ui/sheet"
 import { Calendar } from "./ui/calendar"
 
-export function SheetDemo() {
+export default function SheetDemo() {
   return (
     <Sheet>
       <SheetTrigger asChild>

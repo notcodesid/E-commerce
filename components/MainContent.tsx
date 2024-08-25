@@ -5,11 +5,11 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Tag, Trash2 } from "lucide-react";
-import { AddTodo } from "./AddTodo";
-import { Sidebar } from "./Sidebar" 
-import { CalendarSection } from "./CalendarSection";
+import  AddTodo  from "./AddTodo";
+import  Sidebar  from "./Sidebar" 
+import  CalendarSection  from "./CalendarSection";
 import  SheetSide from "./sheetLabe";
-import { SheetDemo } from "./sheetCalender";
+import  SheetDemo  from "./sheetCalender";
 
 interface Todo {
   id: number;
@@ -17,7 +17,7 @@ interface Todo {
   label: string;
 }
 
-export function MainContent() {
+export default function MainContent() {
   const [todos, setTodos] = useState<Todo[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedLabel, setSelectedLabel] = useState<string | null>(null); // State for selected label

@@ -8,7 +8,7 @@ interface AddTodoProps {
   onAdd: (todo: { title: string; label: string }) => void;
 }
 
-export function AddTodo({ onAdd }: AddTodoProps) {
+export default function AddTodo({ onAdd }: AddTodoProps) {
   const [title, setTitle] = useState("");
   const [label, setLabel] = useState("");
 

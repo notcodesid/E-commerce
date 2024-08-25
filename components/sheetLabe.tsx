@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Sidebar } from "./Sidebar"
+import  Sidebar  from "./Sidebar"
 
 
 const SHEET_SIDES = ["left"] as const;

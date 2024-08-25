@@ -5,7 +5,7 @@ interface SidebarProps {
   onLabelClick: (label: string) => void;
 }
 
-export function Sidebar({ onLabelClick }: SidebarProps) {
+export default function Sidebar({ onLabelClick }: SidebarProps) {
   const labels = ['Coding', 'Reading', 'Basic todos', 'Projects pending'];
 
   return (
