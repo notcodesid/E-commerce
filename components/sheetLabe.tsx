@@ -14,12 +14,6 @@ interface SheetSideProps {
 }
 
 export function SheetSide({ onLabelClick }: SheetSideProps) {
-  const [selectedLabel, setSelectedLabel] = useState<string | null>(null); // State for selected label
-
-
-  const handleLabelClick = (label: string) => {
-    setSelectedLabel(label);
-  };
 
  
   return (
@@ -30,7 +24,9 @@ export function SheetSide({ onLabelClick }: SheetSideProps) {
             <Button variant="outline">{side}</Button>
           </SheetTrigger>
           <SheetContent side={side}>
-            <Sidebar onLabelClick={handleLabelClick} />
+            <Sidebar onLabelClick={function (label: string): void {
+              throw new Error("Function not implemented.");
+            } } />
           </SheetContent>
         </Sheet>
       ))}
