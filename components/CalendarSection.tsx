@@ -3,7 +3,7 @@ import { Calendar } from "@/components/ui/calendar";
 
 export function CalendarSection() {
   return (
-    <div className="w-1/4 p-4">
+    <div className=" p-4">
       <Calendar className="rounded-md border" />
     </div>
   );

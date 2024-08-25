@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -6,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Tag, Trash2 } from "lucide-react";
 import { AddTodo } from "./AddTodo";
 import { Sidebar } from "./Sidebar"; // Import Sidebar
+import { CalendarSection } from "./CalendarSection";
 
 interface Todo {
   id: number;
@@ -48,7 +50,7 @@ export function MainContent() {
         onLabelClick={handleLabelClick} // Pass label click handler
       />
 
-      <div className="w-1/2 p-4">
+      <div className="w-full p-4">
         {/* Search Input */}
         <Input 
           type="search" 
@@ -92,6 +94,9 @@ export function MainContent() {
           ))}
         </div>
       </div>
+<CalendarSection />
     </div>
+
+
   );
 }
